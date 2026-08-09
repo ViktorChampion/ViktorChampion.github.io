@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(30, 30, 46, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #f5c2e7;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            margin: 25px 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #a6adc8;
+            margin-bottom: 25px;
+        }
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .links-list a {
+            color: #89b4fa;
+            text-decoration: none;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        .links-list a:hover {
+            background: rgba(137, 180, 250, 0.1);
+            border-color: rgba(137, 180, 250, 0.3);
+            transform: translateX(4px);
+        }
+        .footer-text {
+            font-size: 0.95rem;
+            color: #bac2de;
+            margin-bottom: 35px;
+        }
+        .footer-text a {
+            color: #f9e2af;
+            text-decoration: underline;
+        }
+        .footer-text a:hover {
+            color: #ffe082;
+        }
+        .btn-click {
+            background: linear-gradient(135deg, #cba6f7, #94e2d5);
+            color: #11111b;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.1s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(203, 166, 247, 0.3);
+        }
+        .btn-click:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(203, 166, 247, 0.5);
+        }
+        .btn-click:active {
+            transform: translateY(0);
+        }
+        .counter {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #a6e3a1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Я</h1>
+        <hr>
+        <h2>А тут просто мои проекты</h2>
+        
+        <div class="links-list">
+            <a href="https://viktorchampion.github.io/BrainfuckInterpreter" target="_blank">💻 Интерпретатор Brainfuck</a>
+            <a href="https://viktorchampion.github.io/eventhemousewalkedmorethanyou" target="_blank">🖱️ Сколько пикселей прошла мышка</a>
+            <a href="https://viktorchampion.github.io/10dcube" target="_blank">📦 10D куб</a>
+            <a href="https://viktorchampion.github.io/ViktorChampion" target="_blank">🔢 Интерактивная таблица умножения</a>
+            <a href="https://viktorchampion.github.io/ArrowPrintInterpreter" target="_blank">💻 Интерпретатор ArrowPrint</a>
+        </div>
+
+        <p class="footer-text">
+            А все мои программы можно посмотреть по ссылке 
+            <a href="https://github.com" target="_blank"></a>github.com/ViktorChampion</a>
+        </p>
+
+        <button class="btn-click" onclick="puk()">Клик</button>
+        <p class="counter" id="ы">Кликов: 0</p>
+    </div>
+
+    <script>
+        let i = 0;
+        function puk() {
+            i++;
+            document.getElementById("ы").innerHTML = `Кликов: ${i}`;
+        }
+    </script>
+
+</body>
+</html>
